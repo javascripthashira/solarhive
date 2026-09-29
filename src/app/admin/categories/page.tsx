@@ -164,8 +164,8 @@ export default function AdminCategoriesPage() {
     <div>
       <h2 className="text-lg font-semibold">Categories ({categories.length})</h2>
       <p className="mt-1 text-sm text-black/50">
-        Two levels supported. Solar Hive currently uses a flat catalog — Residential,
-        Commercial, Agricultural, Inverters &amp; Batteries, Accessories &amp; Installation —
+        Two levels supported. Solar Hive currently uses a flat catalog — Solar Package,
+        Inverters, Batteries, Charge Controllers, Panels, Accessories —
         but you can nest subcategories under any of them if needed.
       </p>
 

@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Solar Hive — Affordable Solar. Flexible Payments.",
   description:
-    "Residential, commercial, and agricultural solar systems, inverters, batteries, and accessories — with Buy Now Pay Later and Save to Buy options.",
+    "Solar packages, inverters, batteries, charge controllers, panels, and accessories — with Buy Now Pay Later and Save to Buy options.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

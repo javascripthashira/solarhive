@@ -3,10 +3,12 @@ import Link from "next/link";
 import { MessageCircle, Leaf, Wallet, ShieldCheck } from "lucide-react";
 
 const categories = [
-  { name: "Residential", slug: "residential" },
-  { name: "Commercial", slug: "commercial" },
-  { name: "Agricultural", slug: "agricultural" },
-  { name: "Inverters & Batteries", slug: "inverters-batteries" },
+  { name: "Solar Package", slug: "solar-package" },
+  { name: "Inverters", slug: "inverters" },
+  { name: "Batteries", slug: "batteries" },
+  { name: "Charge Controllers", slug: "charge-controllers" },
+  { name: "Panels", slug: "panels" },
+  { name: "Accessories", slug: "accessories" },
 ];
 
 const features = [

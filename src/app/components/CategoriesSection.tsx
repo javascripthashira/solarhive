@@ -34,8 +34,8 @@ const CategoriesSection = () => {
       <div className="text-center">
         <h2 className="text-2xl font-semibold tracking-wide uppercase">Shop by Category</h2>
         <p className="mt-2 text-sm text-black/50">
-          Residential, commercial, and agricultural solar solutions — plus the inverters,
-          batteries, and accessories to go with them.
+          Complete solar packages, plus the inverters, batteries, charge controllers, panels,
+          and accessories to build your own system.
         </p>
       </div>
 

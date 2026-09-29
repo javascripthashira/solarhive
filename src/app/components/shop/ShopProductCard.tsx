@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Heart, Star, ShoppingCart, Check } from "lucide-react";
 import { useCart } from "../../context/CartContext";
 import { useWishlist } from "../../context/WishlistContext";
@@ -87,23 +88,26 @@ const ShopProductCard = ({
   if (layout === "list") {
     return (
       <div className="flex items-center gap-4 rounded-2xl border border-black/5 bg-white p-3">
-        <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl">
+        <Link
+          href={`/product/${product.id}`}
+          className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl"
+        >
           {discount > 0 && (
             <span className="absolute top-1.5 left-1.5 z-10 rounded-md bg-gold px-1.5 py-0.5 text-[9px] font-semibold text-black uppercase">
               Sale
             </span>
           )}
           <Image src={product.image} alt={product.name} fill className="object-cover" />
-        </div>
+        </Link>
 
-        <div className="min-w-0 flex-1">
+        <Link href={`/product/${product.id}`} className="min-w-0 flex-1">
           <p className="text-xs tracking-wide text-black/40 uppercase">{product.category}</p>
-          <h4 className="mt-0.5 truncate text-sm font-semibold">{product.name}</h4>
+          <h4 className="mt-0.5 truncate text-sm font-semibold hover:text-gold">{product.name}</h4>
           <div className="mt-1">
             <RatingStars rating={product.rating} reviews={product.reviews} />
           </div>
           <div className="mt-1">{priceRow}</div>
-        </div>
+        </Link>
 
         <button
           onClick={handleToggleWishlist}
@@ -137,17 +141,21 @@ const ShopProductCard = ({
         >
           <Heart className={`h-4 w-4 ${wishlisted ? "fill-black" : ""}`} />
         </button>
-        <Image src={product.image} alt={product.name} fill className="object-cover" />
+        <Link href={`/product/${product.id}`}>
+          <Image src={product.image} alt={product.name} fill className="object-cover" />
+        </Link>
       </div>
 
-      <p className="mt-3 text-xs tracking-wide text-black/40 uppercase">{product.category}</p>
-      <h4 className="mt-0.5 text-sm font-semibold">{product.name}</h4>
+      <Link href={`/product/${product.id}`}>
+        <p className="mt-3 text-xs tracking-wide text-black/40 uppercase">{product.category}</p>
+        <h4 className="mt-0.5 text-sm font-semibold hover:text-gold">{product.name}</h4>
 
-      <div className="mt-1">
-        <RatingStars rating={product.rating} reviews={product.reviews} />
-      </div>
+        <div className="mt-1">
+          <RatingStars rating={product.rating} reviews={product.reviews} />
+        </div>
 
-      <div className="mt-1">{priceRow}</div>
+        <div className="mt-1">{priceRow}</div>
+      </Link>
 
       {addToCartButton}
     </div>

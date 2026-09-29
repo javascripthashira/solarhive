@@ -33,17 +33,19 @@ const ProductCard = ({ product }: { product: Product }) => {
 
   return (
     <div>
-      <div className="relative aspect-square overflow-hidden rounded-2xl">
+      <Link href={`/product/${product.id}`} className="relative block aspect-square overflow-hidden rounded-2xl">
         <Image
           src={product.image}
           alt={product.name}
           fill
           className="object-cover"
         />
-      </div>
-      <p className="mt-3 text-xs font-medium tracking-wide text-black/70 uppercase">
-        {product.name}
-      </p>
+      </Link>
+      <Link href={`/product/${product.id}`}>
+        <p className="mt-3 text-xs font-medium tracking-wide text-black/70 uppercase hover:text-gold">
+          {product.name}
+        </p>
+      </Link>
       <p className="mt-1 text-sm font-semibold text-gold">
         ₦{product.price.toLocaleString()}
       </p>

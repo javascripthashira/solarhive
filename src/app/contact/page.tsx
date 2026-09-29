@@ -2,6 +2,7 @@ import { Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 const EMAIL = "info@solarhive.com.ng";
 const PHONE_DISPLAY = "+234 802 725 0668";
+const PHONE_DISPLAY_ALT = "0906 864 9345";
 const WHATSAPP_NUMBER = "2348027250668";
 
 export default function ContactPage() {
@@ -37,6 +38,7 @@ export default function ContactPage() {
           <Phone className="mx-auto h-6 w-6 text-gold" />
           <h3 className="mt-3 text-sm font-semibold tracking-wide uppercase">Call Us</h3>
           <p className="mt-2 text-sm text-black/60">{PHONE_DISPLAY}</p>
+          <p className="text-sm text-black/60">{PHONE_DISPLAY_ALT}</p>
         </div>
       </div>
 

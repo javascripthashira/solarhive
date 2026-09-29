@@ -43,6 +43,9 @@ const Footer = () => {
       <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
         <div>
           <Logo withTagline />
+          <p className="mt-3 text-xs text-black/40 italic">
+            The power of the sun, in the palm of your hand.
+          </p>
           <p className="mt-4 max-w-xs text-sm text-black/60">
             Clean, reliable, affordable solar energy for your home, business,
             or farm — with flexible payment plans.
@@ -52,6 +55,10 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <Phone className="h-4 w-4 shrink-0 text-gold" />
               +234 802 725 0668
+            </div>
+            <div className="flex items-center gap-3">
+              <Phone className="h-4 w-4 shrink-0 text-gold" />
+              0906 864 9345
             </div>
             <div className="flex items-center gap-3">
               <MessageCircle className="h-4 w-4 shrink-0 text-gold" />

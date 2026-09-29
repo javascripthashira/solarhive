@@ -84,9 +84,14 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <Link href="/login" className="shrink-0 hover:text-gold">
-            Sign In
-          </Link>
+          <div className="flex shrink-0 items-center gap-4">
+            <Link href="/login" className="hover:text-gold">
+              Sign In
+            </Link>
+            <Link href="/signup" className="hover:text-gold">
+              Sign Up
+            </Link>
+          </div>
         )}
       </div>
 
@@ -224,13 +229,22 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <Link
-              href="/login"
-              onClick={() => setOpen(false)}
-              className="mt-3 block rounded-lg border-t border-black/10 px-3 pt-4 text-sm text-black/70 hover:text-gold"
-            >
-              Sign In
-            </Link>
+            <div className="mt-3 flex gap-4 border-t border-black/10 px-3 pt-4 text-sm">
+              <Link
+                href="/login"
+                onClick={() => setOpen(false)}
+                className="text-black/70 hover:text-gold"
+              >
+                Sign In
+              </Link>
+              <Link
+                href="/signup"
+                onClick={() => setOpen(false)}
+                className="text-black/70 hover:text-gold"
+              >
+                Sign Up
+              </Link>
+            </div>
           )}
         </div>
       )}

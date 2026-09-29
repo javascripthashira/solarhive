@@ -18,8 +18,7 @@ type ReviewStepProps = {
 };
 
 const BANK_ACCOUNTS = [
-  { bank: "GTBank", accountName: "Solar Hive", accountNumber: "0123456791" },
-  { bank: "Globus Bank", accountName: "Solar Hive", accountNumber: "2003633190" },
+  { bank: "FCMB", accountName: "Adomo Paradise Karo", accountNumber: "6318310012" },
 ];
 
 const INSTALLMENT_PLANS = [

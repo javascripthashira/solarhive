@@ -36,10 +36,14 @@ const DeliveryForm = ({ details, onChange, onContinue }: DeliveryFormProps) => {
       <div className="mt-6 space-y-4">
         {fields.map((field) => (
           <div key={field.key}>
-            <label className="text-xs font-semibold tracking-wide text-black/60 uppercase">
+            <label
+              htmlFor={`delivery-${field.key}`}
+              className="text-xs font-semibold tracking-wide text-black/60 uppercase"
+            >
               {field.label}
             </label>
             <input
+              id={`delivery-${field.key}`}
               type="text"
               value={details[field.key]}
               placeholder={field.placeholder}

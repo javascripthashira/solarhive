@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "./components/Navbar";
@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  axes: ["opsz", "SOFT", "WONK"],
+});
+
 export const metadata: Metadata = {
   title: "Solar Hive — Affordable Solar. Flexible Payments.",
   description:
@@ -24,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable}`}>
       <body suppressHydrationWarning>
         {/* Required by the Klump SDK, which caches this container on load to mount its checkout iframe into. */}
         <div id="klump__checkout" className="hidden" />

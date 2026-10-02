@@ -20,8 +20,8 @@ const TrustSection = () => {
       </div>
 
       <div>
-        <h2 className="text-3xl font-semibold tracking-tight">
-          Your Power. <span className="text-gold">Our Priority.</span>
+        <h2 className="font-display text-3xl font-semibold tracking-tight">
+          Your power. <span className="text-leaf">Our priority.</span>
         </h2>
         <p className="mt-4 text-black/60">
           At Solar Hive, every system — residential, commercial, or

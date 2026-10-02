@@ -74,7 +74,7 @@ const ProductPanel = ({ heading, subtitle, products, ctaLabel, showDots }: Produ
   return (
     <div className="mx-10 mt-16 rounded-3xl bg-black/4 px-6 py-10 md:px-10">
       <div className="text-center">
-        <h2 className="text-2xl font-semibold tracking-wide uppercase">{heading}</h2>
+        <h2 className="font-display text-3xl font-semibold">{heading}</h2>
         <p className="mt-2 text-sm text-black/50">{subtitle}</p>
       </div>
 
@@ -88,7 +88,7 @@ const ProductPanel = ({ heading, subtitle, products, ctaLabel, showDots }: Produ
         <div className="mt-10 flex justify-center">
           <Link
             href="/shop"
-            className="rounded-full bg-gold px-8 py-3 text-sm font-semibold tracking-wide text-black uppercase transition hover:bg-gold/90"
+            className="rounded-md bg-gold px-8 py-3 text-sm font-semibold tracking-wide text-black uppercase transition hover:bg-gold/90"
           >
             {ctaLabel}
           </Link>

@@ -2,7 +2,7 @@ import CategoriesSection from "./components/CategoriesSection";
 import NewArrivalsSection from "./components/NewArrivalsSection";
 import Hero from "./components/Hero";
 import QualityGrid from "./components/QualityGrid";
-import ThriftPicksSection from "./components/ThriftPicksSection";
+import SpecialOffersSection from "./components/SpecialOffersSection";
 import TrustSection from "./components/TrustSection";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <NewArrivalsSection />
       <TrustSection />
       <QualityGrid />
-      <ThriftPicksSection />
+      <SpecialOffersSection />
     </div>
   );
 }

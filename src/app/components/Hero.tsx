@@ -17,48 +17,40 @@ const features = [
   { icon: ShieldCheck, label: "Energy Independence" },
 ];
 
-const heroTiles = [
-  { src: "/solarhive/products/residential-rooftop-scenic.jpg", alt: "Residential solar panels on a house roof" },
-  { src: "/solarhive/products/inverter-battery-stack.jpg", alt: "Solar inverter and battery installation" },
-  { src: "/solarhive/products/agricultural-farm-barn.jpg", alt: "Solar panels on a farm building" },
-  { src: "/solarhive/products/installation-service.jpg", alt: "Solar panel installation" },
-];
-
 const Hero = () => {
   return (
     <div className="px-6 pt-6 md:px-10">
-      <section className="grid grid-cols-1 gap-8 rounded-3xl bg-black/[0.03] p-8 md:grid-cols-2 md:p-14">
-        <div className="flex flex-col justify-center">
-          <p className="text-xs font-semibold tracking-[0.3em] text-gold uppercase">
+      <section className="relative overflow-hidden rounded-3xl">
+        <div className="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[21/9]">
+          <Image
+            src="/solarhive/products/residential-rooftop-scenic.jpg"
+            alt="Solar panels on a residential roof overlooking the city"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
+        </div>
+
+        <div className="absolute inset-x-0 bottom-0 p-6 md:p-12">
+          <p className="text-xs font-semibold tracking-[0.3em] text-leaf uppercase">
             Switch to Solar. Live Better.
           </p>
-          <h1 className="mt-4 text-4xl leading-tight font-semibold tracking-tight md:text-5xl">
-            Get Solar Now.
+          <h1 className="mt-3 max-w-xl font-display text-4xl leading-[1.05] font-semibold text-white md:text-5xl lg:text-6xl">
+            Get solar now.
             <br />
-            <span className="text-gold">Pay Over Time.</span>
+            Pay over time.
           </h1>
-          <p className="mt-6 max-w-md text-base text-black/60">
+          <p className="mt-4 max-w-md text-sm text-white/75 md:text-base">
             Clean, reliable, affordable solar energy for your home, business,
             or farm — with Buy Now Pay Later and Save to Buy options that fit
             your budget.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            {categories.map((category) => (
-              <Link
-                key={category.slug}
-                href={`/shop?category=${category.slug}`}
-                className="rounded-full border border-black/15 px-5 py-2 text-sm font-medium text-black/80 transition hover:border-gold hover:text-gold"
-              >
-                {category.name}
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-7 flex flex-wrap gap-3">
             <Link
               href="/shop"
-              className="rounded-full bg-gold px-8 py-3 text-sm font-semibold tracking-wide text-black uppercase transition hover:bg-gold/90"
+              className="rounded-md bg-leaf px-7 py-3 text-sm font-semibold tracking-wide text-white uppercase transition hover:bg-leaf-dark"
             >
               Shop Now
             </Link>
@@ -66,39 +58,30 @@ const Hero = () => {
               href="https://wa.me/2348027250668"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold tracking-wide uppercase transition hover:border-gold hover:text-gold"
+              className="flex items-center gap-2 rounded-md border border-white/40 px-6 py-3 text-sm font-semibold tracking-wide text-white uppercase backdrop-blur-sm transition hover:border-white hover:bg-white/10"
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp Us
             </a>
           </div>
         </div>
-
-        <div className="relative grid grid-cols-2 gap-3">
-          {heroTiles.map((tile, i) => (
-            <div
-              key={tile.src}
-              className={`relative overflow-hidden rounded-2xl ${i === 0 ? "aspect-square" : "aspect-square"}`}
-            >
-              <Image
-                src={tile.src}
-                alt={tile.alt}
-                fill
-                priority={i === 0}
-                className="object-cover"
-              />
-            </div>
-          ))}
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-xl bg-cream px-4 py-3 text-black shadow-lg">
-            <p className="text-sm font-semibold tracking-wide">Buy Now Pay Later</p>
-            <p className="text-sm font-semibold tracking-wide text-gold">+ Save to Buy</p>
-          </div>
-        </div>
       </section>
+
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        {categories.map((category) => (
+          <Link
+            key={category.slug}
+            href={`/shop?category=${category.slug}`}
+            className="rounded-md border border-black/15 px-4 py-2 text-sm font-medium text-black/80 transition hover:border-gold hover:text-gold"
+          >
+            {category.name}
+          </Link>
+        ))}
+      </div>
 
       <div className="mt-6 grid grid-cols-1 gap-4 rounded-3xl bg-black/[0.03] px-6 py-6 sm:grid-cols-3 md:px-10">
         {features.map(({ icon: Icon, label }) => (
           <div key={label} className="flex items-center gap-3">
-            <Icon className="h-5 w-5 shrink-0 text-gold" />
+            <Icon className="h-5 w-5 shrink-0 text-leaf" />
             <p className="text-xs font-medium tracking-wide text-black/70">{label}</p>
           </div>
         ))}

@@ -32,7 +32,7 @@ const CategoriesSection = () => {
   return (
     <div className="mx-10 mt-16">
       <div className="text-center">
-        <h2 className="text-2xl font-semibold tracking-wide uppercase">Shop by Category</h2>
+        <h2 className="font-display text-3xl font-semibold">Shop by Category</h2>
         <p className="mt-2 text-sm text-black/50">
           Complete solar packages, plus the inverters, batteries, charge controllers, panels,
           and accessories to build your own system.

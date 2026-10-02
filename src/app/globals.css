@@ -5,6 +5,8 @@
   --color-gold-light: #4C8FE0;
   --color-cream: #FFF4D6;
   --color-leaf: #2E9E46;
+  --color-leaf-dark: #1F7A33;
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
 }
 
 body {

@@ -126,7 +126,7 @@ export default function ProductDetailPage() {
 
         <div>
           <p className="text-xs tracking-wide text-black/40 uppercase">{product.category_name}</p>
-          <h1 className="mt-1 text-2xl font-semibold tracking-tight md:text-3xl">{product.name}</h1>
+          <h1 className="font-display mt-1 text-2xl font-semibold tracking-tight md:text-3xl">{product.name}</h1>
 
           <div className="mt-3 flex items-center gap-2">
             <div className="flex items-center gap-0.5">

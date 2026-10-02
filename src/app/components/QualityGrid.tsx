@@ -11,8 +11,8 @@ const QualityGrid = () => {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
-        <p className="absolute bottom-8 left-8 text-2xl font-semibold tracking-wide text-white uppercase">
-          Solar Energy For A Brighter Tomorrow
+        <p className="font-display absolute bottom-8 left-8 max-w-sm text-2xl font-semibold text-white md:text-3xl">
+          Solar energy for a brighter tomorrow
         </p>
       </div>
 

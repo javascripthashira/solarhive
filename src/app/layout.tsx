@@ -48,6 +48,16 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Solar Hive",
+  url: siteUrl,
+  logo: `${siteUrl}/solarhive/logo.jpg`,
+  telephone: "+2348027250668",
+  areaServed: "NG",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable}`}>
@@ -55,6 +65,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* Required by the Klump SDK, which caches this container on load to mount its checkout iframe into. */}
         <div id="klump__checkout" className="hidden" />
         <Script src="https://js.useklump.com/klump.js" strategy="afterInteractive" />
+        <Script id="organization-jsonld" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(organizationJsonLd)}
+        </Script>
         <Providers>
           <Navbar/>
 

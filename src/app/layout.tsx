@@ -22,10 +22,30 @@ const fraunces = Fraunces({
   axes: ["opsz", "SOFT", "WONK"],
 });
 
+const siteUrl = "https://solarhive.vercel.app";
+const title = "Solar Hive — Affordable Solar. Flexible Payments.";
+const description =
+  "Solar packages, inverters, batteries, charge controllers, panels, and accessories — with Buy Now Pay Later and Save to Buy options.";
+
 export const metadata: Metadata = {
-  title: "Solar Hive — Affordable Solar. Flexible Payments.",
-  description:
-    "Solar packages, inverters, batteries, charge controllers, panels, and accessories — with Buy Now Pay Later and Save to Buy options.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: "Solar Hive",
+    images: [{ url: "/solarhive/products/residential-rooftop-scenic.jpg", width: 1920, height: 1280 }],
+    locale: "en_NG",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/solarhive/products/residential-rooftop-scenic.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
